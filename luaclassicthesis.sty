@@ -312,6 +312,74 @@
 
 \pagestyle{scrheadings}
 
+% ********************************************************************
+% Provide the commands \frontmatter, \mainmatter, and \backmatter if
+% they are not provided by the used documentclass.
+% ********************************************************************
+\providecommand{\frontmatter}{%
+  \cleardoublepage%
+  \pagenumbering{roman}%
+}
+\providecommand{\mainmatter}{%
+  \cleardoublepage%
+  \pagenumbering{arabic}%
+}
+\providecommand{\backmatter}{%
+  \if@openright%
+    \cleardoublepage%
+  \else%
+    \clearpage%
+  \fi%
+  %
+  \rofoot[{%
+    {\ }%
+    \footnotesize%
+    \hspace*{0.75cm}%
+    {\color{thesisblue}\rule[-100pt]{1.25pt}{110pt}}%
+    \hspace*{10pt}%
+    \begin{minipage}[b]{1.5cm}%
+      \normalsize\textbf{\pagemark}%
+    \end{minipage}%
+    \hspace{-1.85cm}%
+  }]{%
+    {\ }%
+    \footnotesize%
+    \textbf{Chapter~\thechapter}%
+    \hspace*{10pt}%
+    {\color{thesisblue}\spacedSmallCaps{\rightmark}}%
+    \hspace*{0.75cm}%
+    {\color{thesisblue}\rule[-100pt]{1.25pt}{110pt}}%
+    \hspace*{10pt}%
+    \begin{minipage}[b]{1.5cm}%
+      \normalsize\textbf{\pagemark}%
+    \end{minipage}%
+    \hspace{-1.85cm}%
+  }%
+  %
+  \lefoot[{%
+    \null\hspace{-1.85cm}%
+    \footnotesize%
+    \begin{minipage}[b]{1.5cm}%
+      \raggedleft\normalsize\textbf{\pagemark}%
+    \end{minipage}%
+    \footnotesize%
+    \hspace*{10pt}%
+    {\color{thesisblue}\rule[-100pt]{1.25pt}{110pt}}%
+  }]{%
+    \null\hspace{-1.85cm}%
+    \footnotesize%
+    \begin{minipage}[b]{1.5cm}%
+      \raggedleft\normalsize\textbf{\pagemark}%
+    \end{minipage}%
+    \footnotesize%
+    \hspace*{10pt}%
+    {\color{thesisblue}\rule[-100pt]{1.25pt}{110pt}}%
+    \hspace*{0.75cm}%
+    \textbf{Chapter~\thechapter}%
+    \hspace*{10pt}%
+    {\color{thesisblue}\spacedSmallCaps{\leftmark}}%
+  }%
+}
     
 % ********************************************************************
 % layout of the chapter-, section-, subsection-, subsubsection-,
