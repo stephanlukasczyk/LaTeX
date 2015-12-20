@@ -732,6 +732,8 @@
 \captionsetup[figure]{name=Fig.}
 \captionsetup[table]{name=Tab.}
 \captionsetup[lstlisting]{name=Lst.}
+\captionsetup[listing]{name=Lst.}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 
 \newenvironment{margincapfigure}[1]{%
   \begin{figure}[#1]%
