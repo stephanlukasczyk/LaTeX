@@ -573,14 +573,14 @@
         \renewcommand{\cftlistingsleader}{\hspace{1.5em}}%
         \renewcommand{\cftlistingsafterpnum}{\cftparfillskip}%
       }
-      \newlength{\listingslabelwidth}%
-      \settowidth{\listingslabelwidth}{\cftlistingspresnum~999}%
-      \addtolength{\listingslabelwidth}{2.5em}%
-      %\cftsetindents{listings}{0em}{\listingslabelwidth}%
-      \cftsetindents{listings}{0em}{\figurelabelwidth}%
-      \let\l@lstlisting\l@listings%
-      \let\lstlistoflistings\listoflistings%
- }{\relax}%
+    \newlength{\listingslabelwidth}%
+    \settowidth{\listingslabelwidth}{\cftlistingspresnum~999}%
+    \addtolength{\listingslabelwidth}{2.5em}%
+    %\cftsetindents{listings}{0em}{\listingslabelwidth}%
+    \cftsetindents{listings}{0em}{\figurelabelwidth}%
+    \let\l@lstlisting\l@listings%
+    \let\lstlistoflistings\listoflistings%
+  }{\relax}%
 
 % dirty work-around to get the spacing after the toc/lot/lof-titles right    
 \ifthenelse{\boolean{@parts}}%        
@@ -591,7 +591,7 @@
       {\relax}%
       {\AtBeginDocument{\addtocontents{toc}{%
         \protect\vspace{-\cftbeforechapskip}}}}
-}
+  }
                                    
 % another dirty work-around to get the spaced low small caps into the toc ;-(
 \ifthenelse{\boolean{@nochapters}}%
