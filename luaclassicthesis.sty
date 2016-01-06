@@ -675,17 +675,9 @@
 % ********************************************************************
 % footnotes setup   
 % ********************************************************************   
-\ifdefined\deffootnote
-  % KOMA-command, footnotemark not superscripted at the bottom
-  \deffootnote{0em}{0em}{\thefootnotemark\hspace*{.5em}}%
-  \message{Using KOMA-command "deffootnote" for footnote setup}%
-\else
-  \PassOptionsToPackage{flushmargin}{footmisc}%
-  \RequirePackage{footmisc}%
-  \setlength{\footnotemargin}{-.5em}%
-  \PackageWarningNoLine{classicthesis}{Using package "footmisc" with option %
-      "flushmargin" for footnote setup (not 100\% the same as with KOMA)}% 
-\fi       
+\PassOptionsToPackage{side,ragged,flushmargin}{footmisc}%
+\RequirePackage{footmisc}%
+\setlength{\footnotemargin}{-.25em}
    
 % ********************************************************************
 % Drafting Stuff
