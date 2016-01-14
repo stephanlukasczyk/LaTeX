@@ -766,6 +766,10 @@
     }%
   }%
 }
+\ExecuteBibliographyOptions{doi=false}
+\newbibmacro{string+doi}[1]{%
+  \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
+\DeclareFieldFormat*{title}{\usebibmacro{string+doi}{\mkbibquote{#1}}}
 
 % ********************************************************************
 % Define a new environment for figures with the caption in the margin
