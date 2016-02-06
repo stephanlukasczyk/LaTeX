@@ -448,7 +448,7 @@
 \ifthenelse{\boolean{@nochapters}}%
   {\relax}%
   {%
-    \renewcommand{\cftchappresnum}{\scshape\MakeTextLowercase}%
+    \renewcommand{\cftchappresnum}{\scshape}%
     \renewcommand{\cftchapfont}{\normalfont}%
     \renewcommand{\cftchappagefont}{\normalfont}%
     \ifthenelse{\boolean{@dottedtoc}}{\relax}%
@@ -465,7 +465,7 @@
     \setlength{\beforebibskip}{1em}%
   }%
   {\relax}
-  \renewcommand{\cftsecpresnum}{\scshape\MakeTextLowercase}%
+  \renewcommand{\cftsecpresnum}{\scshape}%
   \renewcommand{\cftsecfont}{\normalfont}%
   \renewcommand{\cftsecpagefont}{\normalfont}%
   \ifthenelse{\boolean{@dottedtoc}}{\relax}%
@@ -475,7 +475,7 @@
     }
   \ifthenelse{\boolean{@tocaligned}}{\renewcommand{\cftsecindent}{0em}}{\relax}
 % subsections
-\renewcommand{\cftsubsecpresnum}{\scshape\MakeTextLowercase}%
+\renewcommand{\cftsubsecpresnum}{\scshape}%
 \renewcommand{\cftsubsecfont}{\normalfont}%
 \ifthenelse{\boolean{@dottedtoc}}{\relax}%
   {%      
@@ -484,7 +484,7 @@
   }             
 \ifthenelse{\boolean{@tocaligned}}{\renewcommand{\cftsubsecindent}{0em}}{\relax}
 % subsubsections
-\renewcommand{\cftsubsubsecpresnum}{\scshape\MakeTextLowercase}%
+\renewcommand{\cftsubsubsecpresnum}{\scshape}%
 \renewcommand{\cftsubsubsecfont}{\normalfont}%
 \ifthenelse{\boolean{@dottedtoc}}{\relax}%
   {%      
@@ -493,7 +493,7 @@
   }             
 \ifthenelse{\boolean{@tocaligned}}{\renewcommand{\cftsubsubsecindent}{0em}}{\relax}
 % figures     
-\renewcommand{\cftfigpresnum}{\scshape\MakeTextLowercase}% 
+\renewcommand{\cftfigpresnum}{\scshape}% 
 \renewcommand{\cftfigfont}{\normalfont}%                 
 \ifthenelse{\boolean{@dottedtoc}}{\relax}%
   {%
@@ -506,7 +506,7 @@
 \addtolength{\figurelabelwidth}{2.5em}
 \cftsetindents{figure}{0em}{\figurelabelwidth}
 % tables
-\renewcommand{\cfttabpresnum}{\scshape\MakeTextLowercase}%
+\renewcommand{\cfttabpresnum}{\scshape}%
 \renewcommand{\cfttabfont}{\normalfont}%
 \ifthenelse{\boolean{@dottedtoc}}{\relax}%
   {%
@@ -523,7 +523,7 @@
 \ifthenelse{\boolean{@listings}}%        
   {%
     \newlistof{listings}{lol}{\lstlistlistingname}%
-    \renewcommand{\cftlistingspresnum}{\scshape\MakeTextLowercase}%
+    \renewcommand{\cftlistingspresnum}{\scshape}%
     \renewcommand{\cftlistingsfont}{\normalfont}%
     \renewcommand{\cftlistingspresnum}{\lstlistingname~}%
     \renewcommand{\cftlistingspagefont}{\normalfont}%
