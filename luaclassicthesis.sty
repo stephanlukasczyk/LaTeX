@@ -178,7 +178,7 @@
 \newfontfamily\scfont[Letters=SmallCaps]{Linux Libertine O}
 \setsansfont[Ligatures=TeX,Numbers=OldStyle,SmallCapsFont={Linux Biolinum%
   Capitals},SmallCapsFeatures={Letters=SmallCaps}]{Linux Biolinum O}
-\setmonofont{Inconsolata for Powerline}
+\setmonofont[Scale=0.95]{Inconsolata for Powerline}
 \setmathfont[Ligatures=TeX,math-style=ISO,bold-style=ISO,vargreek-shape=TeX]{%
   TeX Gyre Pagella Math}
 \setmathfont[range={\mathcal,\mathbb}]{Latin Modern Math}
@@ -598,42 +598,6 @@
   }{%
     \renewcommand{\finalVersionString}{\emph{Final Version} as of \today\ %
       (\texttt{classicthesis}~\myVersion).}%
-  }
-
-% ********************************************************************
-% Caption numbering now w/o chapter number
-% ********************************************************************
-\ifthenelse{\boolean{@floatperchapter}}%
-  {%
-    \ifthenelse{\boolean{@listings}}%
-      {%
-        \lstset{numberbychapter=true}%
-      }{\relax}% numberbychapter works in listings>=1.4
-  }{%
-    \ifthenelse{\boolean{@listings}}{%
-      \lstset{numberbychapter=false}}{\relax}%
-    \RequirePackage{remreset}%
-    \makeatletter%
-      \ifthenelse{\boolean{@nochapters}}%
-      {\relax}{%
-        \@removefromreset{table}{chapter}  % requires remreset package
-      }%
-      \renewcommand{\thetable}{\arabic{table}}%
-    \makeatother%
-    \makeatletter%
-      \ifthenelse{\boolean{@nochapters}}%
-      {\relax}{%
-        \@removefromreset{figure}{chapter}  % requires remreset package
-      }%
-      \renewcommand{\thefigure}{\arabic{figure}}%  
-    \makeatother%
-    \makeatletter%
-      \ifthenelse{\boolean{@nochapters}}%
-      {\relax}{%
-        \@removefromreset{equation}{chapter}  % requires remreset package
-      }%
-      \renewcommand{\theequation}{\arabic{equation}}%  
-    \makeatother%    
   }
 
 % ********************************************************************
